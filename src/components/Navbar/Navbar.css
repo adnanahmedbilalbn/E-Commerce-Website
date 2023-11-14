@@ -1,0 +1,42 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-btn {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Style for when the dropdown is open */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  

@@ -1,0 +1,43 @@
+/* MyPageInitialExpanded.css */
+
+.w3-sidebar {
+    width: 25%;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+  .w3-bar-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .w3-teal {
+    padding: 20px;
+  }
+  
+  .w3-button {
+    cursor: pointer;
+  }
+  
+  #main {
+    margin-left: 25%;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #main {
+      margin-left: 0;
+    }
+    
+    .w3-sidebar {
+      width: 0;
+      display: none;
+    }
+  }
+  

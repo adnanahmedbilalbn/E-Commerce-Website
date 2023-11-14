@@ -1,5 +1,18 @@
 # Getting Started with Create React App
 
+##  Step 1
+### `Clone Project`
+
+##  Step 2
+### `install node modules`
+
+##  Step 3 ( To run on localhost )
+### ` npm start`
+
+##  Step 4 
+### ` search 'localhost:3000' on browser`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
