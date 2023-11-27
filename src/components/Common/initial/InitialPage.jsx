@@ -1,7 +1,6 @@
 // MyPageInitialExpanded.js
 
 import React from 'react';
-import "./Initial.css"
 
 const MyPageInitialExpanded = () => {
   const openSidebar = () => {

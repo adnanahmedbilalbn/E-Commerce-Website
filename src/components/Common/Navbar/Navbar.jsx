@@ -1,7 +1,6 @@
 // Navbar.js (React Component)
 
 import React, { useState } from 'react';
-import './Navbar.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -13,7 +12,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-item">Home</div>
+      <div className="nav-item">
+        <Link to={"/"}>
+          Home
+        </Link>
+      </div>
       <div className="nav-item">
         <div className="dropdown">
           <div className="dropdown-btn" onClick={toggleDropdown}>
@@ -23,14 +26,25 @@ const Navbar = () => {
           </div>
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <div className="dropdown-item">Men</div>
-              <div className="dropdown-item">Women</div>
-              {/* <div className="dropdown-item">Service 3</div> */}
+            <div className="dropdown-item">
+              <Link to={"/men"}>
+                Men
+              </Link>
             </div>
+            <div className="dropdown-item">
+              <Link to={"/women"}>
+                Women
+              </Link>
+            </div>
+         </div>
           )}
         </div>
       </div>
-      <div className="nav-item">Contact</div>
+      <div className="nav-item">
+          <Link to={"/contact"}>
+                Contact
+          </Link>
+      </div>
     </nav>
   );
 };

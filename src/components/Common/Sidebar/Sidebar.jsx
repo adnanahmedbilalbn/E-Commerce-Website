@@ -1,7 +1,6 @@
 // Sidebar.js (React Component)
 
 import React from 'react';
-import './Sidebar.css'; // Import your CSS file
 
 const Sidebar = ({ products, onProductClick }) => {
 

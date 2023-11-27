@@ -1,49 +1,27 @@
 // Home.js
 import React from 'react';
+import image1 from "../../assets/banner-images/image1.webp"
+import image2 from "../../assets/banner-images/image2.webp"
+import image3 from "../../assets/banner-images/image3.webp"
+import image4 from "../../assets/banner-images/image4.png"
+import HeroSection from '../../components/HeroSection/HeroSection';
+import CategoriesSection from '../../components/CategoriesSection/Catogories';
 
 const Home = () => {
+  
+  const SliderImages = [image1,image2,image3,image4];
+
   return (
     <div>
 
-      {/* Hero Section */}
-      <section>
-        {/* Content for Hero Section */}
-      </section>
+      <HeroSection />
+      <CategoriesSection />
 
-      {/* Featured Products Section */}
-      <section>
-        {/* Content for Featured Products */}
-      </section>
-
-      {/* Categories Section */}
-      <section>
-        {/* Content for Categories */}
-      </section>
+      {/* Features Section */}
 
       {/* About Us Section */}
-      <section>
-        {/* Content for About Us */}
-      </section>
 
-      {/* Testimonials Section */}
-      <section>
-        {/* Content for Testimonials */}
-      </section>
 
-      {/* Newsletter Signup */}
-      <section>
-        {/* Content for Newsletter Signup */}
-      </section>
-
-      {/* Call to Action */}
-      <section>
-        {/* Content for Call to Action */}
-      </section>
-
-      {/* Footer */}
-      <footer>
-        {/* Content for Footer */}
-      </footer>
     </div>
   );
 };

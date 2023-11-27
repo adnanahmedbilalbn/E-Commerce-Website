@@ -1,0 +1,178 @@
+
+.bg-dark{
+    background-color: #000;
+}
+
+
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .nav-item a{
+    color: #000;
+    text-decoration: none;
+  }
+  .nav-item a:hover{
+    color: #555;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-btn {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Style for when the dropdown is open */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* MyPageInitialExpanded.css */
+
+.w3-sidebar {
+    width: 25%;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  
+  .w3-bar-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .w3-teal {
+    padding: 20px;
+  }
+  
+  .w3-button {
+    cursor: pointer;
+  }
+  
+  #main {
+    margin-left: 25%;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #main {
+      margin-left: 0;
+    }
+    
+    .w3-sidebar {
+      width: 0;
+      display: none;
+    }
+  }
+  
+  /* Sidebar.css */
+
+.sidebar {
+    /* width: 200px; */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    flex: 1; /* Take up remaining space */
+
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 10px;
+  }
+  
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-list li {
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s;
+  }
+  
+  .product-list li:hover {
+    background-color: #555;
+  }
+  /* Home.css */
+
+.home-page {
+    display: flex;
+  }
+
+  .hero-section{
+    color: #000;
+  }
+
+  /* Carousel Section */
+  .carousel-caption{
+    color: #000000;
+  }
+
+
+
+  /* CategoriesSection.css */
+.categories-section {
+  padding: 50px 0;
+}
+
+.category-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-img {
+  width: 100%;
+  height: auto;
+}
+
+.category-title {
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
