@@ -1,14 +1,15 @@
 // HeroSection.js
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import image1 from "../../assets/banner-images/image1.webp"
-import image2 from "../../assets/banner-images/image2.webp"
-import image3 from "../../assets/banner-images/image3.webp"
-import image4 from "../../assets/banner-images/image4.png"
+import image1 from "../../assets/images/banner-images/image1.webp"
+import image2 from "../../assets/images/banner-images/image2.webp"
+import image3 from "../../assets/images/banner-images/image3.webp"
+import image4 from "../../assets/images/banner-images/image4.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HeroSection = () => {
   return (
+    // <div>Hero</div>
     <section className="hero-section">
       <Carousel>
         <Carousel.Item>
