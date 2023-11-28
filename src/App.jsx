@@ -1,13 +1,12 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Products from './pages/Products/Products';
-import Navbar from './components/Common/Navbar/Navbar';
+import Home from "./pages/Home"
+import Products from './pages/Products';
+import Navbar from "./components/Common/Navbar"
 import "../src/assets/css/style.css"
-import MyPageInitialExpanded from './components/Common/initial/InitialPage';
-import Contact from './pages/Contact/Contact';
-import Footer from './components/Common/Footer/Footer';
+// import MyPageInitialExpanded from './components/Common/initial/InitialPage';
+import Contact from './pages/Contact';
+import Footer from './components/Common/Footer';
 
 
 const App = () => {
