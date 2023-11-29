@@ -231,3 +231,34 @@
 .login-button:hover {
   background-color: #2980b9;
 }
+
+/* SearchBar.css */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  width: 300px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+}

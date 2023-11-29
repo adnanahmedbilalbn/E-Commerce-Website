@@ -6,13 +6,19 @@ import image3 from "../assets/images/banner-images/image3.webp"
 import image4 from "../assets/images/banner-images/image4.png"
 import HeroSection from "../components/HeroSection/HeroSection"
 import CategoriesSection from "../components/CategoriesSection/Categories"
+import SearchBar from '../components/SearchBar';
 
 const Home = () => {
   
   const SliderImages = [image1,image2,image3,image4];
+  const handleSearch = (searchTerm) => {
+    // Implement your search logic here using the searchTerm
+    console.log('Search term:', searchTerm);
+  };
 
   return (
     <div>
+      <SearchBar placeholder="Search..." onSearch={handleSearch} />
 
       <HeroSection />
       <CategoriesSection />

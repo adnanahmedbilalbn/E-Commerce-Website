@@ -13,6 +13,8 @@ import Register from './components/Register';
 
 
 const App = () => {
+
+
   return (
     <Router>
         <Navbar />
