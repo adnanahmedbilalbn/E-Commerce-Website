@@ -16,7 +16,7 @@ const SearchBar = ({ placeholder, onSearch }) => {
         onChange={handleSearch}
       />
       <button>
-        <img src="path/to/search-icon.png" alt="Search" />
+      <i className="fa fa-search mr-1"></i>
       </button>
     </div>
   );
