@@ -4,7 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import image1 from "../../assets/images/banner-images/image1.webp"
 import image2 from "../../assets/images/banner-images/image2.webp"
 import image3 from "../../assets/images/banner-images/image3.webp"
-import image4 from "../../assets/images/banner-images/image4.png"
+// import image4 from "../../assets/images/banner-images/image4.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HeroSection = () => {
@@ -21,8 +21,8 @@ const HeroSection = () => {
 
           />
           <Carousel.Caption>
-            <h3>Your Catchy Headline</h3>
-            <p>Short and compelling subheadline or tagline that supports the headline.</p>
+            <h3>Best Men Outfits</h3>
+            <p>Shop Now !</p>
             <button className="cta-button">Explore Now</button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -36,8 +36,8 @@ const HeroSection = () => {
 
           />
           <Carousel.Caption>
-            <h3>Your Catchy Headline</h3>
-            <p>Short and compelling subheadline or tagline that supports the headline.</p>
+            <h3>ElectroNics</h3>
+            <p>Buy Now</p>
             <button className="cta-button">Explore Now</button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -51,8 +51,8 @@ const HeroSection = () => {
 
           />
           <Carousel.Caption>
-            <h3>Your Catchy Headline</h3>
-            <p>Short and compelling subheadline or tagline that supports the headline.</p>
+            <h3>Sport</h3>
+            <p>purchase and play!</p>
             <button className="cta-button">Explore Now</button>
           </Carousel.Caption>
         </Carousel.Item>

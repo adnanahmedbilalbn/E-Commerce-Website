@@ -176,3 +176,156 @@
   text-align: center;
   font-size: 18px;
 }
+
+/* LoginPage.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.login-heading {
+  text-align: center;
+  color: #333333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+.login-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-button {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #2980b9;
+}
+
+/* SearchBar.css */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ProductCard.css */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
+  margin: 16px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 16px;
+}
+
+.category {
+  color: #888;
+  font-size: 14px;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.price {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rating {
+  margin-top: 8px;
+  display: flex;
+}
+
+.rating span {
+  color: #f8d847;
+  margin-right: 4px;
+}
+
+.buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
