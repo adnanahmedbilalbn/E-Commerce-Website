@@ -7,34 +7,27 @@ import image4 from "../assets/images/banner-images/image4.png"
 import HeroSection from "../components/HeroSection/HeroSection"
 import CategoriesSection from "../components/CategoriesSection/Categories"
 import SearchBar from '../components/SearchBar';
-import ProductCard from '../components/Card/ProductCard';
-import createLinkedList from '../DSAFunctions/LinkedList';
+import createLinkedList from '../DSAFuntions/LinkedList;
+import ProductSection from '../components/ProductSection/ProductSection';
 
 const Home = () => {
-
-  const product = {
-    image: 'path/to/product-image.jpg',
-    category: 'Electronics',
-    title: 'Smartphone',
-    price: 299.99,
-    rating: 4,
-  };
-  const product2 = {
-    image: 'path/to/product-image.jpg',
-    category: 'Men',
-    title: 'Shirt',
-    price: 30.99,
-    rating: 2,
-  };
-  const product3 = {
-    image: 'path/to/product-image.jpg',
-    category: 'Women',
-    title: 'Shirt',
-    price: 10,
-    rating: 4,
-  };
   
-  const SliderImages = [image1, image2, image3, image4];
+  const SliderImages = [image1,image2,image3,image4];
+  const handleSearch = (searchTerm) => {
+    // Implement your search logic here using the searchTerm
+    console.log('Search term:', searchTerm);
+  };
+
+  return (
+    <div>
+      <SearchBar placeholder="Search..." onSearch={handleSearch} />
+
+      <HeroSection />
+      <CategoriesSection />
+      <ProductSection />
+      {/* Features Section */}
+
+      {/* About Us Section */}
 
   const myLinkedList = createLinkedList();
   myLinkedList.addToEnd('Item 1');
