@@ -3,7 +3,8 @@
 import React from 'react';
 
 const ProductCard = ({ product }) => {
-  const { category, title, price, rating } = product;
+
+  const { image, category, title, price, rating } = product;
 
   const handleAddToCart = () => {
 
@@ -16,9 +17,9 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    
     <div className="product-card">
-      <img src="" alt={title} />
+      <img src={image} alt={title} />
+
       <div className="product-details">
         <span className="category">{category}</span>
         <h3 className="title">{title}</h3>
