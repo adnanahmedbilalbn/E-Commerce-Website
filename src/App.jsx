@@ -11,6 +11,7 @@ import MenProducts from './pages/products/Men';
 import WomenProducts from './pages/products/Women';
 import SportsProducts from './pages/products/Sports';
 import ElectronicProduct from './pages/products/electronics';
+import Cart from './pages/Cart';
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/products/sports' element={<SportsProducts />} />
             <Route path='/login' element={<LoginPage />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
           <Footer />
     </Router>

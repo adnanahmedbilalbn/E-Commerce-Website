@@ -1,5 +1,4 @@
-
-const insertionSort = (array) => {
+const ascInsertionSort = (array) => {
     const sortedArray = [...array];
     const length = sortedArray.length;
     for (let i = 1; i < length; i++) {
@@ -14,4 +13,4 @@ const insertionSort = (array) => {
     return sortedArray;
   };
 
-export default insertionSort;
+  export default ascInsertionSort

@@ -1,6 +1,7 @@
 class Node {
   constructor(data) {
-    this.data = data;   // self.data
+    // this.data = typeof data === 'object' ? data : { value: data };
+    this.data = data    // self.data
     this.next = null;   // self.pointer
   }
 }

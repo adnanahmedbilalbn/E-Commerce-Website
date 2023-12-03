@@ -3,16 +3,13 @@
 import React from 'react';
 
 const ProductCard = ({ product }) => {
-
   const { image, category, title, price, rating } = product;
-
   const handleAddToCart = () => {
 
     console.log(`Added to cart: ${title}`);
   };
 
   const handleBuyNow = () => {
-
     console.log(`Buy now: ${title}`);
   };
 

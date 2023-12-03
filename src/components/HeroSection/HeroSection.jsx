@@ -1,8 +1,9 @@
 // HeroSection.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import image1 from "../../assets/images/banner-images/image1.webp"
-import image2 from "../../assets/images/banner-images/image2.webp"
+import image2 from "../../assets/images/banner-images/banner4.jpg"
 import image3 from "../../assets/images/banner-images/image3.webp"
 // import image4 from "../../assets/images/banner-images/image4.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,7 +24,7 @@ const HeroSection = () => {
           <Carousel.Caption>
             <h3>Best Men Outfits</h3>
             <p>Shop Now !</p>
-            <button className="cta-button">Explore Now</button>
+            <button className="cta-button"> Explore Now</button>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -36,9 +37,9 @@ const HeroSection = () => {
 
           />
           <Carousel.Caption>
-            <h3>ElectroNics</h3>
+            <h3>Electronics</h3>
             <p>Buy Now</p>
-            <button className="cta-button">Explore Now</button>
+            <button className="cta-button btn btn-dark"><Link to="/products/electronics" >Explore Now</Link></button>
           </Carousel.Caption>
         </Carousel.Item>
 
