@@ -9,7 +9,7 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    background-color: #333;
+    /* background-color: #333; */
     padding: 10px;
     color: white;
     position: sticky;
@@ -176,6 +176,10 @@
   text-align: center;
   font-size: 18px;
 }
+.category-title a {
+  text-decoration: none;
+  color: #000;
+}
 
 /* LoginPage.css */
 .login-container {
@@ -263,6 +267,12 @@ button img {
   height: 20px;
 }
 
+/* ProductSection */
+.sort-btn{
+  position: absolute;
+  right: 8rem;
+}
+
 /* ProductCard.css */
 
 .product-card {
@@ -271,14 +281,14 @@ button img {
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  width: 250px;
+  width: 300px;
   margin: 16px;
 }
 
 .product-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-details {
