@@ -21,10 +21,10 @@
     color: #000;
     text-decoration: none;
   }
-  .nav-item a:hover{
+  .nav-item a:hover, .dropdown-item a:hover{
     color: #555;
   }
-  
+
   .dropdown {
     position: relative;
     display: inline-block;
@@ -266,11 +266,20 @@ button img {
   width: 20px;
   height: 20px;
 }
+.cta-button a{
+  text-decoration: none;
+  color: #fff;
+}
 
 /* ProductSection */
 .sort-btn{
   position: absolute;
   right: 8rem;
+}
+.product-dropdown .dropdown-menu button{
+  background-color: #fff;
+  border: none;
+  color: #000;
 }
 
 /* ProductCard.css */
