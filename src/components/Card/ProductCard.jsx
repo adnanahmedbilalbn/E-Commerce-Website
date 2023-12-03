@@ -17,8 +17,9 @@ const ProductCard = ({ product }) => {
   };
 
   return (
+    
     <div className="product-card">
-      <img src="" alt={title} />
+      <img src={image} alt={title} />
 
       <div className="product-details">
         <span className="category">{category}</span>

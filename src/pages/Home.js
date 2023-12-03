@@ -11,6 +11,7 @@ import createLinkedList from '../DSAFunctions/LinkedList'
 import ProductSection from '../components/ProductSection/ProductSection';
 
 const Home = () => {
+  const sectionTitle= ["Our Products"]
   
   const myLinkedList = createLinkedList();
   myLinkedList.addToEnd('Item 1');
@@ -21,18 +22,18 @@ const Home = () => {
   myLinkedList.printList();
   
   const SliderImages = [image1,image2,image3,image4];
-  const handleSearch = (searchTerm) => {
-    // Implement your search logic here using the searchTerm
-    console.log('Search term:', searchTerm);
-  };
+  // const handleSearch = (searchTerm) => {
+  //   // Implement your search logic here using the searchTerm
+  //   console.log('Search term:', searchTerm);
+  // };
 
   return (
     <div>
-      <SearchBar placeholder="Search..." onSearch={handleSearch} />
+      {/* <SearchBar placeholder="Search..." onSearch={handleSearch} /> */}
 
       <HeroSection />
       <CategoriesSection />
-      <ProductSection />
+      {/* <ProductSection /> */}
       {/* Features Section */}
 
       {/* About Us Section */}

@@ -1,6 +1,11 @@
 // CategoriesSection.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import img1 from "../../assets/images/ProductImages/category/men2.jpg"
+import img2 from "../../assets/images/ProductImages/category/women.jpg"
+import img3 from "../../assets/images/ProductImages/category/electronics.jpg"
+import img4 from "../../assets/images/ProductImages/category/sports.jpg"
 
 const CategoriesSection = () => {
   return (
@@ -12,10 +17,10 @@ const CategoriesSection = () => {
             <div className="category-card">
               <img
                 className="category-img"
-                src="https://placekitten.com/300/200"
+                src={img1}
                 alt="Category 1"
               />
-              <h4 className="category-title">Men</h4>
+              <h4 className="category-title"><Link to='/products/men'>Men</Link></h4>
             </div>
           </div>
 
@@ -23,10 +28,10 @@ const CategoriesSection = () => {
             <div className="category-card">
               <img
                 className="category-img"
-                src="https://placekitten.com/300/200"
+                src={img2}
                 alt="Category 2"
               />
-              <h4 className="category-title">Women</h4>
+              <h4 className="category-title"><Link to='/products/women'>Women</Link></h4>
             </div>
           </div>
 
@@ -34,10 +39,10 @@ const CategoriesSection = () => {
             <div className="category-card">
               <img
                 className="category-img"
-                src="https://placekitten.com/300/200"
+                src={img3}
                 alt="Category 3"
               />
-              <h4 className="category-title">Electronics</h4>
+              <h4 className="category-title"><Link to='/products/electronics'>Electronics</Link></h4>
             </div>
           </div>
 
@@ -45,10 +50,10 @@ const CategoriesSection = () => {
             <div className="category-card">
               <img
                 className="category-img"
-                src="https://placekitten.com/300/200"
-                alt="Category 3"
+                src={img4}
+                alt="Category 4"
               />
-              <h4 className="category-title">Sports</h4>
+              <h4 className="category-title"><Link to="/products/sports">Sports</Link> </h4>
             </div>
           </div>
         </div>

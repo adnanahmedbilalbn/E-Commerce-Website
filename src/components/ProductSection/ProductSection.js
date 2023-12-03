@@ -3,46 +3,8 @@ import ProductCard from '../Card/ProductCard';
 import { FaBars } from 'react-icons/fa';
 import insertionSort from '../../DSAFunctions/Sorting';
 
-const ProductSection = () => {
-  const initialProducts = [
-        {
-          // image: 'path/to/product-image.jpg',
-          category: 'Electronics',
-          title: 'Smartphone',
-          price: 1299.99,
-          rating: 4,
-        },
-        {
-          // image: 'path/to/product-image.jpg',
-          category: 'Men',
-          title: 'Shirt',
-          price: 350.99,
-          rating: 2,
-        },
-        {
-          // image: 'path/to/product-image.jpg',
-          category: 'Men',
-          title: 'Shirt',
-          price: 300.99,
-          rating: 2,
-        },
-        {
-          // image: 'path/to/product-image.jpg',
-          category: 'Women',
-          title: 'Shirt',
-          price: 1000,
-          rating: 4,
-        },
-        {
-          // image: '/path/to/producy-image.jpg',
-          category: 'Sports',
-          title: 'Dart',
-          price: 149.99,
-          rating: 4,
-        }
-      ];
-    
-  const [products, setProducts] = useState(initialProducts);
+const ProductSection = ({ heading, product }) => {
+  const [products, setProducts] = useState(product);
   const [sorted, setSorted] = useState(false);
 
   const handleSort = () => {
@@ -51,15 +13,17 @@ const ProductSection = () => {
     setSorted(true);
   };
 
-  const displayProducts = sorted ? products : initialProducts;
+  const displayProducts = sorted ? products : product;
 
   return (
     <div>
-      <h3 className='text-center'>Our Products</h3>
-      <div className='btn btn-lg btn-outline-dark' onClick={handleSort}>
-        <FaBars /> <span>Sort</span>
+      <div className='container my-4'>
+        <div className='d-flex flex-row-reverse mb-4 sort-btn'>
+          <button className='btn btn-lg btn-outline-dark' onClick={handleSort}><FaBars /> Sort</button>
+        </div>
+        <h3 className='text-center'>{heading}</h3>
       </div>
-      <div className='container'>
+      <div className='container my-4'>
         <div className='row'>
           {displayProducts.map((product, index) => (
             <div key={index} className='col-4'>
