@@ -14,7 +14,7 @@ const MiniProducts = () => {
     return (
         <div>
             <div className='container my-4'>
-                <h3 className='text-start'>Women</h3>
+                <h3 className='text-start'>Men</h3>
             </div>
             <div className='container my-4'>
                 <div className='row'>

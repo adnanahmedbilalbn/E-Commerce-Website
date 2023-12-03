@@ -31,7 +31,21 @@ class LinkedList {
       current = current.next;       // move the head of node into next pointer and store it value in current var
     }
   }
-
+  isEmpty() {
+    return this.head === null;
+  }
+  clear() {
+    this.head = null;
+  }
+  toArray() {
+    const result = [];
+    let current = this.head;
+    while (current) {
+      result.push(current.data);
+      current = current.next;
+    }
+    return result;
+  }
   deleteItem(item) {
     let current = this.head;
     let prev = null;

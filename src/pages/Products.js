@@ -3,6 +3,8 @@ import CategoriesSection from '../components/CategoriesSection/Categories';
 import MiniProducts from '../components/ProductSection/ProductSection2';
 
 const EcommerceWebsite = () => {
+
+  
   // const [searchQuery, setSearchQuery] = useState('');
   // const [searchResults, setSearchResults] = useState([]);
 

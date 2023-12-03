@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import SearchBar from '../SearchBar';
-
+import linearSearch from '../../DSAFunctions/Searching';
+import { setSearchData } from '../../redux/actions/searchAction';
+import { useDispatch } from 'react-redux';
+import men from '../../api/Men';
+import women from '../../api/Women';
+import sports from '../../api/Sports';
+import electronics from '../../api/Electronics';
 
 const Navbar = () => {
 
@@ -29,20 +35,49 @@ const Navbar = () => {
     // ... other sports products
   ];
 
+  const products = [
+    { id: 1, category: 'Men', name: 'Men\'s Casual Shirt', price: 29.99 },
+    { id: 2, category: 'Women', name: 'Women\'s Running Shoes', price: 59.99 },
+    { id: 3, category: 'Electronics', name: 'Smartphone (Android)', price: 399.99 },
+    { id: 4, category: 'Sports', name: 'Basketball', price: 24.99 },
+    { id: 5, category: 'Men', name: 'Men\'s Leather Wallet', price: 19.99 },
+    { id: 6, category: 'Women', name: 'Women\'s Yoga Mat', price: 29.99 },
+    { id: 7, category: 'Electronics', name: 'Wireless Headphones', price: 79.99 },
+    { id: 8, category: 'Sports', name: 'Running Shorts', price: 34.99 },
+    { id: 9, category: 'Men', name: 'Men\'s Sports Watch', price: 49.99 },
+    { id: 10, category: 'Women', name: 'Women\'s Backpack', price: 39.99 },
+  ];
+  
 
-  const [searchQuery, setSearchQuery] = useState('');
+
+  const Navigate = useNavigate()
+  const dispatch = useDispatch()
   const [searchResults, setSearchResults] = useState([]);
+  const[searchVal, setSearchVal] = useState([]);
+  const [query, setQuery] = useState([])
+  function handlePage(){
+
+    // Navigate(`/${searchVal}`)
+    
+    setSearchVal(linearSearch(products, query))
+    dispatch(setSearchData(searchVal))
+    Navigate("/searchPage")
+  }
 
   const handleSearch = (event) => {
-    const query = event.target.value.toLowerCase();
-    setSearchQuery(query);
+    setQuery(event.target.value);
+    // event.preventDefault()
+    console.log(products, query)
+    setSearchVal(linearSearch(products, event.target.value))
+    Navigate("/searchPage")
+   
 
-    // Linear search across all product arrays
-    const allProducts = [...electronics, ...clothing, ...accessories, ...sports];
-    const results = allProducts.filter(
-      (product) => product.name.toLowerCase().includes(query)
-    );
-    setSearchResults(results);
+    // // Linear search across all product arrays
+    // const allProducts = [...electronics, ...clothing, ...accessories, ...sports];
+    // const results = allProducts.filter(
+    //   (product) => product.name.toLowerCase().includes(query)
+    // );
+    // setSearchResults(results);
   };
 
   return (
@@ -78,13 +113,14 @@ const Navbar = () => {
       </nav>
       {/* <SearchBar placeholder="Search..." onSearch={handleSearch} electronics={electronics} clothing={clothing} accessories={accessories} sports={sports} /> */}
       <div className='container'>
-        <div className="search-bar rounded-pill">
+     
+     <div className="search-bar rounded-pill">
           <input
             type="text"
             placeholder="Search ....."
             onChange={handleSearch}
           />
-          <button className='rounded-circle btn btn-dark'>
+          <button onClick={handlePage} className='rounded-circle btn btn-dark'>
             <i className="fa fa-search mr-1"></i>
           </button>
         </div>

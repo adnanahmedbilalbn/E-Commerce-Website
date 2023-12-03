@@ -1,43 +1,43 @@
-import React from "react";
-import ProductSection from "../../components/ProductSection/ProductSection";
-import electronicImg1 from "../../assets/images/ProductImages/electronics/electronic-25.jpg"
-import electronicImg2 from "../../assets/images/ProductImages/electronics/electronic-26.jpg"
-import electronicImg3 from "../../assets/images/ProductImages/electronics/electronic-6.jpg"
-import electronicImg4 from "../../assets/images/ProductImages/electronics/electronic-29.jpg"
-import electronicImg5 from "../../assets/images/ProductImages/electronics/electronic-30.jpg"
-import electronicImg6 from "../../assets/images/ProductImages/electronics/electronic-22.jpg"
-import electronicImg7 from "../../assets/images/ProductImages/electronics/electronic-5.jpg"
-import electronicImg8 from "../../assets/images/ProductImages/electronics/electronic-8.jpg"
-import electronicImg9 from "../../assets/images/ProductImages/electronics/electronic-13.jpg"
-import electronicImg10 from "../../assets/images/ProductImages/electronics/electronic-17.jpg"
-import electronicImg11 from "../../assets/images/ProductImages/electronics/electronic-23.jpg"
-import electronicImg12 from "../../assets/images/ProductImages/electronics/electronic-3.jpg"
-import electronicImg13 from "../../assets/images/ProductImages/electronics/electronic-15.jpg"
-import electronicImg14 from "../../assets/images/ProductImages/electronics/electronic-21.jpg"
-import electronicImg15 from "../../assets/images/ProductImages/electronics/electronic-18.jpg"
-import electronicImg16 from "../../assets/images/ProductImages/electronics/portable(electronic-27).jpg"
-import electronicImg17 from "../../assets/images/ProductImages/electronics/electronic-12.jpg"
-import electronicImg18 from "../../assets/images/ProductImages/electronics/electronic-20.jpg"
-import electronicImg19 from "../../assets/images/ProductImages/electronics/electronic-13.jpg"
-import electronicImg20 from "../../assets/images/ProductImages/electronics/electronic-25.jpg"
-import electronicImg21 from "../../assets/images/ProductImages/electronics/electronic-5.jpg"
-import electronicImg22 from "../../assets/images/ProductImages/electronics/split(electronic-28).jpg"
-import electronicImg23 from "../../assets/images/ProductImages/electronics/electronic-31.jpg"
+// ;import electronicImg1 from "../electronic-25.jpg"
+import electronicImg2 from "../assets/images/ProductImages/electronics/electronic-1.jpg";
+import electronicImg3 from "../assets/images/ProductImages/electronics/electronic-6.jpg";
+import electronicImg4 from "../assets/images/ProductImages/electronics/electronic-29.jpg";
+import electronicImg5 from "../assets/images/ProductImages/electronics/electronic-30.jpg";
+import electronicImg6 from "../assets/images/ProductImages/electronics/electronic-22.jpg";
+import electronicImg7 from "../assets/images/ProductImages/electronics/electronic-5.jpg";
+import electronicImg8 from "../assets/images/ProductImages/electronics/electronic-8.jpg";
+import electronicImg9 from "../assets/images/ProductImages/electronics/electronic-13.jpg";
+import electronicImg10 from "../assets/images/ProductImages/electronics/electronic-17.jpg";
+import electronicImg11 from "../assets/images/ProductImages/electronics/electronic-23.jpg";
+import electronicImg12 from "../assets/images/ProductImages/electronics/electronic-3.jpg";
+import electronicImg13 from "../assets/images/ProductImages/electronics/electronic-15.jpg";
+import electronicImg14 from "../assets/images/ProductImages/electronics/electronic-21.jpg";
+import electronicImg15 from "../assets/images/ProductImages/electronics/electronic-18.jpg";
+import electronicImg16 from "../assets/images/ProductImages/electronics/portable(electronic-27).jpg";
+import electronicImg17 from "../assets/images/ProductImages/electronics/electronic-12.jpg";
+import electronicImg18 from "../assets/images/ProductImages/electronics/electronic-20.jpg";
+import electronicImg19 from "../assets/images/ProductImages/electronics/electronic-13.jpg";
+import electronicImg20 from "../assets/images/ProductImages/electronics/electronic-25.jpg";
+import electronicImg21 from "../assets/images/ProductImages/electronics/electronic-5.jpg";
+import electronicImg22 from "../assets/images/ProductImages/electronics/split(electronic-28).jpg";
+import electronicImg23 from "../assets/images/ProductImages/electronics/electronic-31.jpg";
 
-const electronic = [
-    {
-        image: electronicImg1,
-        category: 'Electronics',
-        title: 'Samsung 32 inch LED',
-        price: 12999.99,
-        rating: 4,
-    },
+
+const electronics = [
+    // {
+    //     image: electronicImg1,
+    //     category: 'Electronics',
+    //     title: 'Samsung 32 inch LED',
+    //     price: 12999.99,
+    //     rating: 4,
+    // },
     {
         image: electronicImg2,
         category: 'Electronics',
         title: 'Window Air Conditioner',
         price: 42599.99,
         rating: 4,
+        searchName:"Conditioner"
     },
     {
         image: electronicImg3,
@@ -45,6 +45,7 @@ const electronic = [
         title: 'Mobile Phone',
         price: 62099.99,
         rating: 4,
+        searchName:"phone"
     },
     {
         image: electronicImg4,
@@ -59,6 +60,7 @@ const electronic = [
         title: 'iPad mini',
         price: 1299.99,
         rating: 4,
+        searchName:"phone"
     },
 
     {
@@ -74,6 +76,8 @@ const electronic = [
         title: "Mobile Phone",
         price: 64055,
         rating: 3,
+        searchName:"phone"
+
     },
     {
         image: electronicImg8,
@@ -85,9 +89,10 @@ const electronic = [
     {
         image: electronicImg9,
         category: "Electronics",
-        title: "Head Phone",
+        title: "Audionic Head Phone",
         price: 2450,
         rating: 3,
+        searchName:"Head Phone"
     },
     {
         image: electronicImg10,
@@ -109,6 +114,8 @@ const electronic = [
         title: "Mobile Phone",
         price: 54050,
         rating: 3,
+        searchName:"phone"
+
     },
     {
         image: electronicImg13,
@@ -116,6 +123,8 @@ const electronic = [
         title: "Head Phone with pair of earpods",
         price: 1508,
         rating: 4,
+        searchName:"Head Phone"
+
     },
     {
         image: electronicImg14,
@@ -141,9 +150,11 @@ const electronic = [
     {
         image: electronicImg17,
         category: "Electronics",
-        title: "Head Phone",
+        title: "X-gamers headphone",
         price: 3450.56,
         rating: 4,
+        searchName:"Head Phone"
+
     },
     {
         image: electronicImg18,
@@ -155,9 +166,11 @@ const electronic = [
     {
         image: electronicImg19,
         category: "Electronics",
-        title: "Head phone",
+        title: "H-T Limited",
         price: 2448.95,
         rating: 3,
+        searchName:"Head Phone"
+
     },
     {
         image: electronicImg20,
@@ -172,6 +185,8 @@ const electronic = [
         title: "Mobile Phone",
         price: 40000,
         rating: 4,
+        searchName:"phone"
+
     },
     {
         image: electronicImg22,
@@ -189,22 +204,5 @@ const electronic = [
     },
 ]
 
-// const electronic2DArray = [
-//     [electronicImg1, 'Electronics', 'Samsung 32 inch LED', 12999.99, 4],
-//     [electronicImg2, 'Electronics', 'Window Air Conditioner', 42599.99, 4],
-//   ];
-  
 
-const ElectronicProduct = () => {
-    const sectionTitle = ["Electonic's Collection"]
-
-    return (
-        <div>
-            <ProductSection heading={sectionTitle} product={electronic} />
-            {/* <ProductSection heading={sectionTitle} product={electronic2DArray} /> */}
-
-        </div>
-    )
-}
-export default ElectronicProduct
-export const electronicsarray = electronic
+export default electronics;

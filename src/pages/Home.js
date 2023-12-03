@@ -1,5 +1,5 @@
 // Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import image1 from "../assets/images/banner-images/image1.webp"
 import image2 from "../assets/images/banner-images/image2.webp"
 import image3 from "../assets/images/banner-images/image3.webp"
@@ -21,6 +21,15 @@ import productImg9 from "../assets/images/ProductImages/sports/sports-38.jpg"
 import productImg10 from "../assets/images/ProductImages/electronics/electronic-31.jpg"
 import productImg11 from "../assets/images/ProductImages/women/necklace5.PNG"
 import productImg12 from "../assets/images/ProductImages/men/wrist watch4.PNG"
+import { useDispatch } from 'react-redux';
+import { setMenData } from '../redux/actions/menActions';
+import menData from '../api/Men';
+import wonenData from '../api/Women';
+import electronic from '../api/Electronics';
+import sports from '../api/Sports';
+import { setWomenData } from '../redux/actions/womenActions';
+import { setSportsData } from '../redux/actions/sportsAction';
+import { setElectronicData } from '../redux/actions/electronicsAction';
 
 const myProducts = [
   {
@@ -109,7 +118,23 @@ const myProducts = [
   },
 ]
 
+
+// components/YourComponent.js
+
 const Home = () => {
+
+  const dispatch = useDispatch();
+
+  // Dispatch action to set men data in Redux store
+  useEffect(() => {
+    dispatch(setMenData(menData));
+    dispatch(setWomenData(wonenData));
+    dispatch(setSportsData(sports));
+    dispatch(setElectronicData(electronic));
+
+    console.log("Dispatched")
+  }, [dispatch]);
+
   const sectionTitle = ["Our Products"]
 
   const myLinkedList = createLinkedList();

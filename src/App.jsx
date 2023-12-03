@@ -12,6 +12,7 @@ import WomenProducts from './pages/products/Women';
 import SportsProducts from './pages/products/Sports';
 import ElectronicProduct from './pages/products/electronics';
 import Cart from './pages/Cart';
+import SearchPage from './pages/SearchPage';
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
             <Route path='/login' element={<LoginPage />} />
             <Route path='/register' element={<Register />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/searchPage' element={<SearchPage />} />
           </Routes>
           <Footer />
     </Router>

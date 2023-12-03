@@ -1,12 +1,21 @@
 // ProductCard.js
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setCartData } from '../../redux/actions/cartActions';
+
 
 const ProductCard = ({ product }) => {
-  const { image, category, title, price, rating } = product;
-  const handleAddToCart = () => {
 
-    console.log(`Added to cart: ${title}`);
+  const dispatch = useDispatch()
+  const Navigate = useNavigate()
+  const { image, category, title, price, rating } = product;
+
+  const handleAddToCart = (product) => {
+    console.log(`Added to cart: ${product}`);
+    dispatch(setCartData(product))
+    Navigate("/cart")
   };
 
   const handleBuyNow = () => {
@@ -30,7 +39,9 @@ const ProductCard = ({ product }) => {
           ))}
         </div>
         <div className="buttons">
-          <button onClick={handleAddToCart}>Add to Cart</button>
+          {/* <button onClick={handleAddToCart(title,price)}>Add to Cart</button> */}
+          <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+
           <button onClick={handleBuyNow}>Buy Now</button>
         </div>
       </div>
