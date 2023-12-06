@@ -21,9 +21,7 @@ const AdminPage = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to backend, store in database)
     console.log('Form submitted:', productData);
-    // Reset the form after submission
     setProductData({
       name: '',
       category: '',

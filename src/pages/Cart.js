@@ -62,7 +62,7 @@ const Cart = () => {
     linkedList.deleteItem(item);
   };
   console.log(linkedList)
-  console.log(linkedList?.head?.data)
+  console.log(linkedList?.head)
   return (
     <div>
       <h2>Your Cart</h2>
