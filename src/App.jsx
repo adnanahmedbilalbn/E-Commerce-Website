@@ -13,6 +13,7 @@ import SportsProducts from './pages/products/Sports';
 import ElectronicProduct from './pages/products/electronics';
 import Cart from './pages/Cart';
 import SearchPage from './pages/SearchPage';
+import AdminPage from './components/admin';
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
             <Route path='/products/sports' element={<SportsProducts />} />
             <Route path='/login' element={<LoginPage />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/admin' element={<AdminPage />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/searchPage' element={<SearchPage />} />
           </Routes>
