@@ -26,7 +26,7 @@ const Navbar = () => {
 
   function handleSearch(event){
     setQuery(event.target.value);
-    dispatch(setSearchData(searchVal))
+    // dispatch(setSearchData(searchVal))
     setSearchVal(linearSearch(products, event.target.value))
     // Navigate("/searchPage")
   };

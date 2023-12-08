@@ -9,7 +9,7 @@ function linearSearch(array, target){
         // console.log(array[i], target)
     }
     // return -1;
-    return " Product Not Found";
+    return -1;
   };
   
 export default linearSearch

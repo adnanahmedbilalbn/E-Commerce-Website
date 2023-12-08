@@ -8,10 +8,13 @@ const SearchPage = () => {
 
   return (
     <div>
-      {searchItem? (
+      {(searchItem !== -1) ? (
         <ProductCard product={searchItem} />
       ) : (
-        <p>Nothing Found</p>
+        <div className="text-center">
+          <p>Sorry !</p>
+          <p >Nothing Found</p>
+        </ div>
       )}
     </div>
   );

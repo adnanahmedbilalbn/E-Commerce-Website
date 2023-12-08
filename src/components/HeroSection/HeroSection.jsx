@@ -3,12 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import image1 from "../../assets/images/banner-images/image1.webp"
-import image2 from "../../assets/images/banner-images/banner4.jpg"
+import image2 from "../../assets/images/ProductImages/category/electronic-banner.jpg"
 import image3 from "../../assets/images/banner-images/image3.webp"
 // import image4 from "../../assets/images/banner-images/image4.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HeroSection = () => {
+
   return (
     // <div>Hero</div>
     <section className="hero-section">
@@ -39,7 +40,7 @@ const HeroSection = () => {
           <Carousel.Caption>
             <h3>Electronics</h3>
             <p>Buy Now</p>
-            <button className="cta-button btn btn-dark"><Link to="/products/electronics" >Explore Now</Link></button>
+            <button className="cta-button"><Link to="/products/electronics" >Explore Now</Link></button>
           </Carousel.Caption>
         </Carousel.Item>
 
