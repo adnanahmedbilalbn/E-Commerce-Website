@@ -32,8 +32,8 @@ const ProductSection = ({ heading, product }) => {
               Sort
             </button>
             <ul class="dropdown-menu">
-              <li><button className='m-0' onClick={() => handleSort('ascending')}>Ascending Sort</button></li>
-              <li><button className='m-0' onClick={() => handleSort('descending')}>Descending Sort</button></li>
+              <li><button className='m-0' onClick={() => handleSort('ascending')}>Low Price</button></li>
+              <li><button className='m-0' onClick={() => handleSort('descending')}>High Price</button></li>
             </ul>
           </div>
         </div>

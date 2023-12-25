@@ -53,7 +53,7 @@ const HeroSection = () => {
 
           />
           <Carousel.Caption>
-            <h3>Sport</h3>
+            <h3>Outfits</h3>
             <p>purchase and play!</p>
             <button className="cta-button">Explore Now</button>
           </Carousel.Caption>
