@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AdminPage = () => {
+const AddProducts = () => {
   const [productData, setProductData] = useState({
     name: '',
     category: '',
@@ -66,4 +66,4 @@ const AdminPage = () => {
   );
 };
 
-export default AdminPage;
+export default AddProducts;

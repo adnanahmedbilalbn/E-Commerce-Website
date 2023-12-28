@@ -13,7 +13,9 @@ import SportsProducts from './pages/products/Sports';
 import ElectronicProduct from './pages/products/electronics';
 import Cart from './pages/Cart';
 import SearchPage from './pages/SearchPage';
-import AdminPage from './components/admin';
+import AdminPage from './pages/AdminPage';
+import CheckoutPage from './pages/CheckoutPage';
+import AddProduct from './pages/AddProducts';
 
 
 
@@ -35,6 +37,10 @@ const App = () => {
             <Route path='/admin' element={<AdminPage />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/searchPage' element={<SearchPage />} />
+            <Route path='/checkoutPage' element={<CheckoutPage />} />
+            <Route path='/addProduct' element={<AddProduct />} />
+
+
           </Routes>
           <Footer />
     </Router>

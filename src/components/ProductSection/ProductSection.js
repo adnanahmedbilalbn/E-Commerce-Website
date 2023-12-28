@@ -47,15 +47,6 @@ const ProductSection = ({ heading, product }) => {
             </div>
           ))}
         </div>
-        {/* {
-          (for(var i = 0; i < displayProducts.length; i++) {
-            var product = displayProducts[i];
-            for(var j = 0; j < displayProducts.length; j++) {
-                console.log("product[" + i + "][" + j + "] = " + product[j]);
-            }
-        } )
-        } */}
-
       </div>
     </div>
   );
