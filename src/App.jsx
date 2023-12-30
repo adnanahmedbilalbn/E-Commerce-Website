@@ -18,10 +18,7 @@ import CheckoutPage from './pages/CheckoutPage';
 import AddProduct from './pages/AddProducts';
 import OrderCheck from './pages/OrderCheck';
 
-
-
 const App = () => {
-
 
   return (
     <Router>
@@ -41,9 +38,6 @@ const App = () => {
             <Route path='/checkoutPage' element={<CheckoutPage />} />
             <Route path='/addProduct' element={<AddProduct />} />
             <Route path='/checkOrders' element={<OrderCheck />} />
-
-
-
           </Routes>
           <Footer />
     </Router>

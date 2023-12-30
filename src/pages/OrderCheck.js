@@ -10,8 +10,8 @@ const OrderCheck = () => {
       <div>
         <h1>New Orders</h1>
       </div>
-      {buyItems?.map((item) => (
-        <p key={item.id}>{item?.title}</p>
+      {buyItems?.map((item,index) => (
+        <p key={item.index}>{item?.title}</p>
       ))}
     </div>
   );

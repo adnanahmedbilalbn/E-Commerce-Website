@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoriesSection from '../components/CategoriesSection/Categories';
-import MiniProducts from '../components/ProductSection/ProductSection2';
+import MiniProducts from '../components/ProductSection/MiniProducts';
 
 const EcommerceWebsite = () => {
 
