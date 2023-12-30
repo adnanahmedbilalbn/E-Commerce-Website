@@ -6,6 +6,7 @@ import sportsReducer from './sportsReducer';
 import electronicsReducer from './electronicsReducer';
 import cartReducer from './cartReducer';
 import searchReducer from './searchReducer';
+import itemReducer from './itemReducer';
 
 const rootReducer = combineReducers({
   men: menReducer,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   sports: sportsReducer,
   electronics: electronicsReducer,
   cartItems: cartReducer,
-  searchItem:searchReducer
+  searchItem:searchReducer,
+  buyingItem:itemReducer
 });
 
 export default rootReducer;

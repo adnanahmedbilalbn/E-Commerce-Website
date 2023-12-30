@@ -506,3 +506,40 @@ body {
   font-size: 36px;
   margin-bottom: 10px;
 }
+
+/* Add your responsive styling here */
+
+.checkout-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkout-container .form-group {
+  margin-bottom: 15px;
+}
+
+.checkout-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.checkout-container button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-container button:hover {
+  background-color: #45a049;
+}

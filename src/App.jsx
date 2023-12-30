@@ -16,6 +16,7 @@ import SearchPage from './pages/SearchPage';
 import AdminPage from './pages/AdminPage';
 import CheckoutPage from './pages/CheckoutPage';
 import AddProduct from './pages/AddProducts';
+import OrderCheck from './pages/OrderCheck';
 
 
 
@@ -39,6 +40,8 @@ const App = () => {
             <Route path='/searchPage' element={<SearchPage />} />
             <Route path='/checkoutPage' element={<CheckoutPage />} />
             <Route path='/addProduct' element={<AddProduct />} />
+            <Route path='/checkOrders' element={<OrderCheck />} />
+
 
 
           </Routes>

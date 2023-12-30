@@ -1,4 +1,4 @@
-// ProductCard.js
+// CartCard.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -6,7 +6,7 @@ import { setCartData } from '../../redux/actions/cartActions';
 import Modal from '../Common/Modal'; // Import the Modal component
 import { setItemData } from '../../redux/actions/buyNowAction';
 
-const ProductCard = ({ product }) => {
+const CartCard = ({ product }) => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const { image, category, title, price, rating } = product;
@@ -23,7 +23,8 @@ const ProductCard = ({ product }) => {
     console.log(`Buy now: ${title}`, price, image);
     dispatch(setItemData(product))
     console.log("buy now item dispatched==>",product)
-    setShowModal(true);
+    Navigate("/checkoutPage")
+    // setShowModal(true);
   };
 
   const closeModal = () => {
@@ -62,4 +63,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default CartCard;
