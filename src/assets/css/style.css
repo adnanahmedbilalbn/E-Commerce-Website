@@ -297,13 +297,23 @@ button img {
   width: 200px;
   margin: 1px;
 } */
-
+.cartCounter{
+  position: absolute;
+  color: #fff;
+  background-color: red;
+  padding: 10px;
+  border-radius: 28px;
+  font-size: 0.5rem;
+  top: -60%;
+}
 .product-card img {
   width: 100%;
   height: 200px;
   object-fit: contain;
 }
-
+.product-card form input{
+  width: 80%;
+}
 .product-details {
   padding: 16px;
 }
@@ -382,8 +392,10 @@ button:hover {
 
 .modal-main {
   position: fixed;
+  overflow-y: scroll;
   background: white;
-  width: 50%;
+  width: 80%;
+  height: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -543,3 +555,40 @@ textarea {
 .checkout-container button:hover {
   background-color: #45a049;
 }
+
+
+/* OrderCheck.css */
+.order-check-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  img {
+    max-width: 80px;
+    margin-right: 20px;
+  }
+}
+
+.customer-info {
+  margin-top: 10px;
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+/* Add more styles as needed */

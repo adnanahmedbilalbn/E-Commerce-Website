@@ -2,8 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import createLinkedList from '../DSAFunctions/LinkedList'; 
 import ProductSection from '../components/ProductSection/ProductSection';
-import CartCard from '../components/Card/CartCard';
-
 
 const Cart = () => {
   const cartItems = useSelector((state) => state?.cartItems);
@@ -28,27 +26,17 @@ const Cart = () => {
 
   return (
     <div>
-      <h2>Your Cart</h2>
+
       {linkedList.isEmpty() ? (
         <p>Your cart is empty.</p>
       ) : (
         <>
-        {/* <CartCard heading={"Cart"} product={linkedList.toArray()} /> */}
 
         <ProductSection heading={"Cart"} product={linkedList.toArray()} />
 
-           {/* {linkedList.toArray().map((cartItem, index) => ( */}
-        {/* //     <div key={index}>
-        //       <h1>{cartItem.category}</h1>
-        //       <p>{cartItem.title}</p>
-        //       <p>{cartItem.price}</p>
-        //       <button onClick={() => handleRemoveItem(cartItem)}>
-        //         Remove
-        //       </button>
-        //     </div> */}
-        {/* //   ))} */}
         </>
       )}
+
     </div>
   );
 };

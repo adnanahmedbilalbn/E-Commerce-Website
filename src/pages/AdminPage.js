@@ -22,12 +22,11 @@ const AdminPage = () => {
         <i onClick={() => navigate('/addProduct')} className="icon fas fa-plus-circle"></i>
         {/* <button >Navigate</button> */}
       </div>
-
+{/* 
       <div className="admin-container">
         <h3>Add Feature Product</h3>
         <i onClick={() => navigate('/addFeatureProduct')} className="icon fas fa-star"></i>
-        {/* <button >Navigate</button> */}
-      </div>
+      </div> */}
 
     </div>
   );

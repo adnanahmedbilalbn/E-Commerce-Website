@@ -8,8 +8,12 @@ import men from '../../api/Men';
 import women from '../../api/Women';
 import sports from '../../api/Sports';
 import electronics from '../../api/Electronics';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+
+  const cartItems = useSelector((state) => state?.cartItems);
+  const cartItemsCount = cartItems.length
 
   const products = [...men, ...women, ...sports, ...electronics];
   const Navigate = useNavigate()
@@ -54,8 +58,9 @@ const Navbar = () => {
             <div className="buttons text-center">
               <NavLink to="/login" className="btn btn-outline-dark m-2"><i className="fa fa-sign-in-alt mr-1"></i> Login</NavLink>
               <NavLink to="/register" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink>
-              <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i>
-                Cart
+              <NavLink to="/cart" className="btn btn-outline-dark m-2 position-relative"><i className="fa fa-cart-shopping mr-1"></i>
+                Cart 
+                <span className='cartCounter'>{cartItemsCount}</span>
                 {/* ({state.length})  */}
               </NavLink>
             </div>

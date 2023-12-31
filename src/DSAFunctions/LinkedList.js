@@ -65,6 +65,15 @@ class LinkedList {
     // Unlink the node from the list
     prev.next = current.next;
   }
+  countNodes() {
+    let count = 0;
+    let current = this.head;
+    while (current) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
 }
 
 function createLinkedList () {
