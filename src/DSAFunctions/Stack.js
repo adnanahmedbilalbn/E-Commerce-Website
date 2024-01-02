@@ -45,23 +45,30 @@ class Node {
       }
     }
   }
+
+function stack () {
+    return new Stack();
+};
   
-  // Example usage:
-  const stack = new Stack();
+export default stack;
   
-  stack.push(1);
-  stack.push(2);
-  stack.push(3);
   
-  console.log("Top of the stack:", stack.peek()); // Output: 3
+  // // Example usage:
+  // const stack = new Stack();
   
-  stack.pop();
+  // stack.push(1);
+  // stack.push(2);
+  // stack.push(3);
   
-  console.log("After pop, top of the stack:", stack.peek()); // Output: 2
+  // console.log("Top of the stack:", stack.peek()); // Output: 3
   
-  console.log("Is the stack empty?", stack.isEmpty()); // Output: false
+  // stack.pop();
   
-  stack.print();
+  // console.log("After pop, top of the stack:", stack.peek()); // Output: 2
+  
+  // console.log("Is the stack empty?", stack.isEmpty()); // Output: false
+  
+  // stack.print();
   /*
   Output:
   2
