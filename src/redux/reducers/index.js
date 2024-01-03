@@ -7,6 +7,7 @@ import electronicsReducer from './electronicsReducer';
 import cartReducer from './cartReducer';
 import searchReducer from './searchReducer';
 import itemReducer from './itemReducer';
+import productReducer from './addProductReducer';
 
 const rootReducer = combineReducers({
   men: menReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   electronics: electronicsReducer,
   cartItems: cartReducer,
   searchItem:searchReducer,
-  buyingItem:itemReducer
+  buyingItem:itemReducer,
+  productItem: productReducer
 });
 
 export default rootReducer;
