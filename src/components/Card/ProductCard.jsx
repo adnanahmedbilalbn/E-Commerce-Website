@@ -7,7 +7,7 @@ import Modal from '../Common/Modal';
 import { setItemData } from '../../redux/actions/buyNowAction';
 import { useSelector } from 'react-redux';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, isCart }) => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const { image, category, title, price, rating } = product;
@@ -53,6 +53,9 @@ const ProductCard = ({ product }) => {
     alert(`Added to cart: ${product.title}`)
     // Navigate('/cart');
   };
+  const handleRemoveFromCart = (product) => {
+    console.log(product,"card>>>>>>>>>>>")
+  }
 
   const handleBuyNow = () => {
     setShowModal(true);
@@ -78,7 +81,12 @@ const ProductCard = ({ product }) => {
           ))}
         </div>
         <div className="buttons">
-          <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+         {isCart ? (
+
+            <button className='bg-danger' onClick={() => handleRemoveFromCart(product)}>Remove</button>
+         ): <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+
+        }
           <button onClick={handleBuyNow}>Buy Now</button>
         </div>
       </div>

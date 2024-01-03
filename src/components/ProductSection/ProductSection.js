@@ -3,7 +3,7 @@ import ProductCard from '../Card/ProductCard';
 import ascInsertionSort from '../../DSAFunctions/sorting/ascendingSort';
 import desInsertionSort from '../../DSAFunctions/sorting/descendingSort';
 
-const ProductSection = ({ heading, product }) => {
+const ProductSection = ({ heading, product , isCart }) => {
   const [products, setProducts] = useState(product);
   const [sorted, setSorted] = useState(false);
   const [sortType, setSortType] = useState(null);
@@ -43,7 +43,7 @@ const ProductSection = ({ heading, product }) => {
         <div className='row'>
           {displayProducts.map((product, index) => (
             <div key={index} className='col-4'>
-              <ProductCard product={product} />
+              <ProductCard product={product} isCart={isCart}/>
             </div>
           ))}
         </div>
