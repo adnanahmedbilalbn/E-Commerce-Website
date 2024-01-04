@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import createLinkedList from '../DSAFunctions/LinkedList'; 
 import ProductSection from '../components/ProductSection/ProductSection';
-import CartCard from '../components/Card/CartCard';
+// import CartCard from '../components/Card/CartCard';
+
+
 
 const Cart = () => {
   const cartItems = useSelector((state) => state?.cartItems);

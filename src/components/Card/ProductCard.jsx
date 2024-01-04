@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setCartData } from '../../redux/actions/cartActions';
+import { removeCartItem, setCartData } from '../../redux/actions/cartActions';
 import Modal from '../Common/Modal';
 import { setItemData } from '../../redux/actions/buyNowAction';
 import { useSelector } from 'react-redux';
@@ -54,6 +54,8 @@ const ProductCard = ({ product, isCart }) => {
     // Navigate('/cart');
   };
   const handleRemoveFromCart = (product) => {
+    console.log(product.title,"remove>>>>")
+    dispatch(removeCartItem(product.title));
     console.log(product,"card>>>>>>>>>>>")
   }
 

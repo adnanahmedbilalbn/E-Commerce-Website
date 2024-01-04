@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
   cartItems: cartReducer,
   searchItem:searchReducer,
   buyingItem:itemReducer,
-  productItem: productReducer
+  newProduct: productReducer
 });
 
 export default rootReducer;

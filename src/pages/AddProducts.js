@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setProductData } from '../redux/actions/addProductAction';
 
 const AddProduct = () => {
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
   const [productCtg, setProductCtg] = useState('');
   const [productImage, setProductImage] = useState('');
+  const dispatch = useDispatch()
+
+  const completeProduct = [...productName, ...productPrice, ...productImage, ...productCtg]
 
   const handleAddProduct = () => {
-    console.log('Product added:', productName, productPrice, productCtg, productImage);
+    // console.log('Product added:', productName, productPrice, productCtg, productImage);
+    // console.log(productCtg,productImage,productName, productPrice,"asdfasdfasdfasdf")
+    // console.log(completeProduct)
+    console.log(productImage,"from admin")
+    dispatch(setProductData(productImage))
   };
 
   const handleImageChange = (e) => {
