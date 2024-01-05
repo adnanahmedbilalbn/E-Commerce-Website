@@ -7,8 +7,9 @@ const cartReducer = (state = [], action) => {
 
     case 'REMOVE_CART_ITEM':
       // Assuming action.payload contains the index or unique identifier of the item to be removed
-      const itemIndexToRemove = action.payload;
-      return state.filter((item, index) => index !== itemIndexToRemove);
+      const titleToRemove = action.payload;
+      // return state.filter((item, index) => index !== itemIndexToRemove);
+      return state.filter(item => item.title !== titleToRemove);
 
     default:
       return state;

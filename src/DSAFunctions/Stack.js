@@ -46,14 +46,14 @@ class Node {
     }
   }
 
-function stack () {
+function createStack () {
     return new Stack();
 };
   
-export default stack;
+export default createStack;
   
   
-  // // Example usage:
+  // Example usage:
   // const stack = new Stack();
   
   // stack.push(1);

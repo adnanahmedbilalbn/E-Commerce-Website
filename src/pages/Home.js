@@ -1,5 +1,6 @@
 // Home.js
 import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import image1 from "../assets/images/banner-images/image1.webp"
 import image2 from "../assets/images/banner-images/image2.webp"
 import image3 from "../assets/images/banner-images/image3.webp"
@@ -28,6 +29,8 @@ import sports from '../api/Sports';
 import { setWomenData } from '../redux/actions/womenActions';
 import { setSportsData } from '../redux/actions/sportsAction';
 import { setElectronicData } from '../redux/actions/electronicsAction';
+import createStack from '../DSAFunctions/Stack';
+import FeaturedProducts from '../components/Card/FeatureCard';
 
 const myProducts = [
   {
@@ -121,6 +124,22 @@ const myProducts = [
 
 const Home = () => {
 
+  const newProduct = useSelector((state) => state?.newProduct);
+  console.log(newProduct,"asdamsdaksda")
+
+  // // const stack =  stack();
+  // const stack = createStack()
+  
+  // stack.push(1);
+  // stack.push(2);
+  // stack.push(3);
+  
+  // console.log("Top of the stack:", stack.peek()); // Output: 3
+  // stack.pop();
+  // console.log("After pop, top of the stack:", stack.peek()); // Output: 2
+  // console.log("Is the stack empty?", stack.isEmpty()); // Output: false
+  // stack.print();
+
   const dispatch = useDispatch();
 
   // Dispatch action to set men data in Redux store
@@ -139,6 +158,8 @@ const Home = () => {
 
   return (
     <div>
+      <img src={newProduct} />
+      <FeaturedProducts product={newProduct}/>
       <HeroSection />
       <CategoriesSection />
       <ProductSection heading={sectionTitle} product={myProducts} />
