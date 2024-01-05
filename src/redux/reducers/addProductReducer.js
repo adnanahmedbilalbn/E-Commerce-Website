@@ -3,7 +3,7 @@
     switch (action.type) {
       case 'SET_PRODUCT_DATA':
         console.log("Product-->>>.",action.payload)
-        return [...state, action.payload];
+        return [action.payload];
       default:
         return state;
     }

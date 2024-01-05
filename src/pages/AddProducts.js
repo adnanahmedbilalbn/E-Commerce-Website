@@ -1,22 +1,39 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProductData } from '../redux/actions/addProductAction';
+import createStack from '../DSAFunctions/Stack';
 
 const AddProduct = () => {
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
   const [productCtg, setProductCtg] = useState('');
   const [productImage, setProductImage] = useState('');
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const completeProduct = [...productName, ...productPrice, ...productImage, ...productCtg]
+  // Initialize or get the stack instance
+  const productStack = createStack();
 
   const handleAddProduct = () => {
-    // console.log('Product added:', productName, productPrice, productCtg, productImage);
-    // console.log(productCtg,productImage,productName, productPrice,"asdfasdfasdfasdf")
-    // console.log(completeProduct)
-    console.log(productImage,"from admin")
-    dispatch(setProductData(productImage))
+    const productData = {
+      name: productName,
+      price: productPrice,
+      category: productCtg,
+      image: productImage,
+    };
+
+    // Push the new product onto the stack
+    productStack.push(productData);
+
+    // Dispatch the latest product from the stack
+    const latestProduct = productStack.peek();
+    console.log(latestProduct,"prod from prod")
+    dispatch(setProductData(latestProduct));
+
+    // Reset form fields
+    setProductName('');
+    setProductPrice('');
+    setProductCtg('');
+    setProductImage('');
   };
 
   const handleImageChange = (e) => {
@@ -29,6 +46,7 @@ const AddProduct = () => {
       reader.readAsDataURL(file);
     }
   };
+
 
   return (
     <div className="page-container">

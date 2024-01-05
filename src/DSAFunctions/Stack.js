@@ -1,77 +1,42 @@
-class Node {
-    constructor(data) {
-      this.data = data;
-      this.next = null;
-    }
-  }
-  
-  class Stack {
-    constructor() {
-      this.top = null;
-      this.size = 0;
-    }
-  
-    push(data) {
-      const newNode = new Node(data);
-      newNode.next = this.top;
-      this.top = newNode;
-      this.size++;
-    }
-  
-    pop() {
-      if (!this.top) {
-        return null; // Stack is empty
-      }
-  
-      const poppedData = this.top.data;
-      this.top = this.top.next;
-      this.size--;
-      return poppedData;
-    }
-  
-    peek() {
-      return this.top ? this.top.data : null;
-    }
-  
-    isEmpty() {
-      return this.size === 0;
-    }
-  
-    print() {
-      let current = this.top;
-      while (current) {
-        console.log(current.data);
-        current = current.next;
-      }
-    }
+class Stack {
+  constructor() {
+    this.stackArray = [];
+    this.size = 0;
   }
 
-function createStack () {
-    return new Stack();
-};
-  
+  push(data) {
+    this.stackArray.push(data);
+    this.size++;
+    console.log("New stack data pushed:", data);
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return null; // Stack is empty
+    }
+
+    const poppedData = this.stackArray.pop();
+    this.size--;
+    return poppedData;
+  }
+
+  peek() {
+    return this.isEmpty() ? null : this.stackArray[this.stackArray.length - 1];
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  print() {
+    for (let i = this.size - 1; i >= 0; i--) {
+      console.log(this.stackArray[i]);
+    }
+  }
+}
+
+function createStack() {
+  return new Stack();
+}
+
 export default createStack;
-  
-  
-  // Example usage:
-  // const stack = new Stack();
-  
-  // stack.push(1);
-  // stack.push(2);
-  // stack.push(3);
-  
-  // console.log("Top of the stack:", stack.peek()); // Output: 3
-  
-  // stack.pop();
-  
-  // console.log("After pop, top of the stack:", stack.peek()); // Output: 2
-  
-  // console.log("Is the stack empty?", stack.isEmpty()); // Output: false
-  
-  // stack.print();
-  /*
-  Output:
-  2
-  1
-  */
-  

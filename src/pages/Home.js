@@ -1,5 +1,5 @@
 // Home.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef  , useState } from 'react';
 import { useSelector } from 'react-redux';
 import image1 from "../assets/images/banner-images/image1.webp"
 import image2 from "../assets/images/banner-images/image2.webp"
@@ -127,19 +127,6 @@ const Home = () => {
   const newProduct = useSelector((state) => state?.newProduct);
   console.log(newProduct,"asdamsdaksda")
 
-  // // const stack =  stack();
-  // const stack = createStack()
-  
-  // stack.push(1);
-  // stack.push(2);
-  // stack.push(3);
-  
-  // console.log("Top of the stack:", stack.peek()); // Output: 3
-  // stack.pop();
-  // console.log("After pop, top of the stack:", stack.peek()); // Output: 2
-  // console.log("Is the stack empty?", stack.isEmpty()); // Output: false
-  // stack.print();
-
   const dispatch = useDispatch();
 
   // Dispatch action to set men data in Redux store
@@ -158,7 +145,6 @@ const Home = () => {
 
   return (
     <div>
-      <img src={newProduct} />
       <FeaturedProducts product={newProduct}/>
       <HeroSection />
       <CategoriesSection />
